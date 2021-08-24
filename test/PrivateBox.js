@@ -1,4 +1,5 @@
 const { expect } = require('chai');
+const { resolveProperties } = require('ethers/lib/utils');
 
 describe('PrivateBox', function() {
     // Deploy the contract and create an instance of it for each tests
@@ -35,6 +36,11 @@ describe('PrivateBox', function() {
     
             // Read the new message and verify it is the same one.
             expect((await this.privatebox.getMessage()).toString()).to.equal(newMessage);
+        });
+
+        it('Only the owner can set the message', async function() {
+            //this.privatebox.connect(addr1).setMessage(newMessage);
+            await expect(this.privatebox.connect(addr1).setMessage(newMessage)).to.be.revertedWith("Only the owner can use this function");
         });
     });
     
