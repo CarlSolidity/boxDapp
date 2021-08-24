@@ -34,6 +34,40 @@
       "artifacts": [
         "Box"
       ]
+    },
+    "C:\\Users\\Carl\\Desktop\\Hardhat\\boxDapp\\contracts\\PrivateBox.sol": {
+      "lastModificationDate": 1629769396992,
+      "contentHash": "9771c666e131351cdd9206b6eeca9062",
+      "sourceName": "contracts/PrivateBox.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PrivateBox"
+      ]
     }
   }
 }
